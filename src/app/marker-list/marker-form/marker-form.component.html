@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Enregistrer une nouvelle adresse</h2>
+    <form [formGroup]="markerForm" (ngSubmit)="onSaveMarker()">
+      <div class="form-group">
+        <label for="title">Titre</label>
+        <input type="text" id="title" class="form-control" formControlName="title">
+      </div>
+      <div class="form-group">
+        <label for="address">Adresse</label>
+        <input type="text" id="address" class="form-control" formControlName="address">
+      </div>
+      <div class="form-group">
+        <label for="latitude">Lattitude</label>
+        <input type="text" id="latitude" class="form-control" formControlName="latitude">
+      </div>
+      <div class="form-group">
+        <label for="longitude">Longitude</label>
+        <input type="text" id="longitude" class="form-control" formControlName="longitude">
+      </div>
+      <button class="btn btn-success" [disabled]="markerForm.invalid"
+              type="submit">Enregistrer
+      </button>
+    </form>
+  </div>
+</div>

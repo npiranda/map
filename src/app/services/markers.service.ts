@@ -17,7 +17,6 @@ export class MarkersService {
 
   markers: Marker[] = [];
   markersSubject = new Subject<Marker[]>();
-
   emitMarkers(){
     this.markersSubject.next(this.markers);
   }
@@ -33,7 +32,6 @@ export class MarkersService {
         this.emitMarkers();
       });
   }
-
   getSingleMarker(id: number){
     return new Promise(
       (resolve, reject) => {

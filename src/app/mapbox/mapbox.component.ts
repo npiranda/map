@@ -12,12 +12,14 @@ import {AuthService} from '../services/auth.service';
 export class MapboxComponent implements OnInit {
   map: mapboxgl.Map;
   name: string;
+  e: any;
 
   constructor(private mapService: MapService, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.mapService.initMap();
     this.name = this.authService.user;
+
   }
 
 }
